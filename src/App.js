@@ -6,6 +6,7 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 import Biography from './containers/biography';
 import Home from './containers/home';
+import Portfolio from './containers/Portfolio';
 
 import Navigation from './components/navigation';
 
@@ -18,14 +19,8 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-      <div>
-            <Layout style={{ minHeight: '100vh' }}>
-            <Navigation  newKey={this.state.newKey} />
-
-              <Route exact path="/" component={Home} />
-              <Route key="bio" path="/biography" component={Biography} />
-            </Layout>
-
+        <div>
+          <Portfolio />
         </div>
       </BrowserRouter>
     );
