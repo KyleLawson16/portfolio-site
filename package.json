@@ -8,7 +8,8 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "react-social-icons": "^2.7.0"
+    "react-social-icons": "^2.7.0",
+    "react-window-size": "^1.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
