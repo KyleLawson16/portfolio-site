@@ -24,6 +24,7 @@ class Portfolio extends Component {
       jumbotronGIF: VidvisionGIF,
       jumbotronTitle: "Vidvision",
       jumbotronLink: "https://www.getvidvision.com/",
+      opacity: 0,
     };
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -55,6 +56,7 @@ class Portfolio extends Component {
 
   handleSelect(title, image, gif, link) {
     this.setState({
+      opacity: 0,
       jumbotronImage: image,
       jumbotronGIF: gif,
       jumbotronTitle: title,
@@ -62,20 +64,52 @@ class Portfolio extends Component {
     });
     this.renderJumbotron()
   }
+  imageLoadHandler() {
+    console.log('loaded');
+    this.setState({ opacity: 1 });
+  }
 
   renderJumbotron() {
     return (
-      <Jumbotron
-        top={(0.18 * this.props.windowHeight) + (this.props.windowWidth / 50) }
-        left={(0.3085 * this.props.windowWidth)}
-        width={(0.359 * this.props.windowWidth)}
-        image={this.state.jumbotronImage}
-        gif={this.state.jumbotronGIF}
-        title={this.state.jumbotronTitle}
-        link={this.state.jumbotronLink}
-      />
+      <div className="jumbotron">
+      <a href={this.state.jumbotronLink} target="__blank">
+        <img
+          src={this.state.jumbotronImage}
+          className="jumbo-image"
+          style={{
+            position: 'absolute',
+            width: (0.359 * this.props.windowWidth),
+            left: (0.3085 * this.props.windowWidth),
+            top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50)
+          }}
+        />
+        <img
+          src={this.state.jumbotronGIF}
+          onLoad={this.imageLoadHandler.bind(this)}
+          className="jumbo-image"
+          style={{
+            position: 'absolute',
+            width: (0.359 * this.props.windowWidth),
+            left: (0.3085 * this.props.windowWidth),
+            top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
+            opacity: this.state.opacity,
+            zIndex: 99999,
+          }}
+        />
+      </a>
+      </div>
+
     )
   }
+  // <Jumbotron
+  //   top={(0.18 * this.props.windowHeight) + (this.props.windowWidth / 50) }
+  //   left={(0.3085 * this.props.windowWidth)}
+  //   width={(0.359 * this.props.windowWidth)}
+  //   image={this.state.jumbotronImage}
+  //   gif={this.state.jumbotronGIF}
+  //   title={this.state.jumbotronTitle}
+  //   link={this.state.jumbotronLink}
+  // />
 
   render() {
     return (
