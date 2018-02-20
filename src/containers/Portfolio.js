@@ -62,6 +62,20 @@ class Portfolio extends Component {
     });
   }
 
+  renderJumbotron() {
+    return (
+      <Jumbotron
+        top={(0.18 * this.props.windowHeight) + (this.props.windowWidth / 50) }
+        left={(0.3085 * this.props.windowWidth)}
+        width={(0.359 * this.props.windowWidth)}
+        image={this.state.jumbotronImage}
+        gif={this.state.jumbotronGIF}
+        title={this.state.jumbotronTitle}
+        link={this.state.jumbotronLink}
+      />
+    )
+  }
+
   render() {
     return (
       <div>
@@ -89,15 +103,7 @@ class Portfolio extends Component {
           <img src={Background} style={{ width: '100%', position: 'relative' }} />
         </div>
 
-        <Jumbotron
-          top={(0.18 * this.props.windowHeight) + (this.props.windowWidth / 50) }
-          left={(0.3085 * this.props.windowWidth)}
-          width={(0.359 * this.props.windowWidth)}
-          image={this.state.jumbotronImage}
-          gif={this.state.jumbotronGIF}
-          title={this.state.jumbotronTitle}
-          link={this.state.jumbotronLink}
-        />
+        {this.renderJumbotron()}
 
 
         <Row
