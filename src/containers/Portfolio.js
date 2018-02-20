@@ -4,9 +4,9 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import Vidvision from '../assets/images/vidvision.png';
-import Melillo from '../assets/images/melillo.png';
-import Pureworld from '../assets/images/pureworld.png';
+import Vidvision from '../assets/images/vidvision.gif';
+import Melillo from '../assets/images/melillo.gif';
+import Pureworld from '../assets/images/pureworld.gif';
 
 import Jumbotron from '../components/Jumbotron';
 import Thumbnail from '../components/Thumbnail';
