@@ -5,6 +5,9 @@ class Jumbotron extends Component {
     super(props);
     this.state = { opacity: 0 };
   }
+  componentDidMount() {
+    this.setState({ opacity: 0 });
+  }
   componentWillReceiveProps(nextProps) {
     return (
       <div className="jumbotron">
