@@ -7,6 +7,7 @@ class Jumbotron extends Component {
   }
   componentWillReceiveProps(nextProps) {
     return (
+      <div className="jumbotron">
       <a href={this.props.link} target="__blank">
         <img
           src={this.props.image}
@@ -28,9 +29,11 @@ class Jumbotron extends Component {
             left: this.props.left,
             top: this.props.top,
             opacity: this.state.opacity,
+            zIndex: 99999,
           }}
         />
       </a>
+      </div>
     )
   }
   imageLoadHandler() {
