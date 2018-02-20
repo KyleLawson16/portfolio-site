@@ -130,7 +130,7 @@ class Portfolio extends Component {
           </Col>
         </Row>
         <Row justify="space-around" align="middle" style={{ marginBottom: 20 }}>
-          <Col span={24} style={{ textAlign: 'center', marginLeft: 5}}>
+          <Col span={24} style={{ textAlign: 'center' }}>
             {this.renderSocialIcons()}
           </Col>
         </Row>
