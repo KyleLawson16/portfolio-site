@@ -4,6 +4,7 @@ class Jumbotron extends Component {
   render() {
     return (
       <div>
+      <a href={this.props.link} target="__blank">
         <img
           src={this.props.image}
           className="jumbo-image"
@@ -14,6 +15,7 @@ class Jumbotron extends Component {
             top: this.props.top
           }}
         />
+      </a>
       </div>
     )
   }

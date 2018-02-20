@@ -9,7 +9,7 @@ class Thumbnail extends Component {
   }
 
   handleSelect() {
-    this.props.handleSelect(this.props.title, this.props.image);
+    this.props.handleSelect(this.props.title, this.props.image, this.props.link);
   }
 
   render() {
@@ -17,7 +17,7 @@ class Thumbnail extends Component {
       <div
         onClick={this.handleSelect}
       >
-        <h1>{this.props.title}</h1>
+        <h1 className="thumbnail-title">{this.props.title}</h1>
       </div>
     )
   }
