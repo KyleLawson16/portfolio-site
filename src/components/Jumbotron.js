@@ -5,13 +5,8 @@ class Jumbotron extends Component {
     super(props);
     this.state = { opacity: 0 };
   }
-  imageLoadHandler() {
-    console.log('loaded');
-    this.setState({ opacity: 1 });
-  }
-  render() {
+  componentWillReceiveProps(nextProps) {
     return (
-      <div>
       <a href={this.props.link} target="__blank">
         <img
           src={this.props.image}
@@ -36,6 +31,16 @@ class Jumbotron extends Component {
           }}
         />
       </a>
+    )
+  }
+  imageLoadHandler() {
+    console.log('loaded');
+    this.setState({ opacity: 1 });
+  }
+  render() {
+    return (
+      <div>
+        {this.componentWillReceiveProps()}
       </div>
     )
   }

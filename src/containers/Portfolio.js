@@ -60,6 +60,7 @@ class Portfolio extends Component {
       jumbotronTitle: title,
       jumbotronLink: link,
     });
+    this.renderJumbotron()
   }
 
   renderJumbotron() {
