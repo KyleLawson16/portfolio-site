@@ -4,9 +4,12 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import Vidvision from '../assets/images/vidvision.gif';
-import Melillo from '../assets/images/melillo.gif';
-import Pureworld from '../assets/images/pureworld.gif';
+import VidvisionGIF from '../assets/images/vidvision.gif';
+import Vidvision from '../assets/images/vidvision.png';
+import MelilloGIF from '../assets/images/melillo.gif';
+import Melillo from '../assets/images/melillo.png';
+import PureworldGIF from '../assets/images/pureworld.gif';
+import Pureworld from '../assets/images/pureworld.png';
 
 import Jumbotron from '../components/Jumbotron';
 import Thumbnail from '../components/Thumbnail';
@@ -18,6 +21,7 @@ class Portfolio extends Component {
 
     this.state = {
       jumbotronImage: Vidvision,
+      jumbotronGIF: VidvisionGIF,
       jumbotronTitle: "Vidvision",
       jumbotronLink: "https://www.getvidvision.com/",
     };
@@ -49,9 +53,10 @@ class Portfolio extends Component {
     });
   }
 
-  handleSelect(title, image, link) {
+  handleSelect(title, image, gif, link) {
     this.setState({
       jumbotronImage: image,
+      jumbotronGIF: gif,
       jumbotronTitle: title,
       jumbotronLink: link,
     });
@@ -89,6 +94,7 @@ class Portfolio extends Component {
           left={(0.3085 * this.props.windowWidth)}
           width={(0.359 * this.props.windowWidth)}
           image={this.state.jumbotronImage}
+          gif={this.state.jumbotronGIF}
           title={this.state.jumbotronTitle}
           link={this.state.jumbotronLink}
         />
@@ -106,6 +112,7 @@ class Portfolio extends Component {
             <Thumbnail
               title="Vidvision"
               image={Vidvision}
+              gif={VidvisionGIF}
               link="https://www.getvidvision.com/"
               handleSelect={this.handleSelect}
             />
@@ -114,6 +121,7 @@ class Portfolio extends Component {
             <Thumbnail
               title="Melillo Equities"
               image={Melillo}
+              gif={MelilloGIF}
               link="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
               handleSelect={this.handleSelect}
             />
@@ -122,6 +130,7 @@ class Portfolio extends Component {
             <Thumbnail
               title="Pureworld Hemp"
               image={Pureworld}
+              gif={PureworldGIF}
               link="http://blog.pureworldshop.com/"
               handleSelect={this.handleSelect}
             />
