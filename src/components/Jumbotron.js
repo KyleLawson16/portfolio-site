@@ -6,6 +6,7 @@ class Jumbotron extends Component {
       <div>
         <img
           src={this.props.image}
+          className="jumbo-image"
           style={{
             position: 'absolute',
             width: this.props.width,

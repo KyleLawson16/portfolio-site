@@ -31,36 +31,54 @@ class Portfolio extends Component {
       <Layout
         style={{
           minHeight: '100vh',
+          backgroundColor: 'white',
         }}
       >
         <div>
           <img src={Background} style={{ width: '100%', position: 'relative' }} />
         </div>
 
-          <Jumbotron
-            top={(0.15 * this.props.windowHeight) + (this.props.windowWidth / 50) }
-            left={(0.3085 * this.props.windowWidth)}
-            width={(0.359 * this.props.windowWidth)}
-            image={this.state.jumbotronImage}
-          />
+        <Jumbotron
+          top={(0.15 * this.props.windowHeight) + (this.props.windowWidth / 50) }
+          left={(0.3085 * this.props.windowWidth)}
+          width={(0.359 * this.props.windowWidth)}
+          image={this.state.jumbotronImage}
+        />
 
-        <div>
-          <Thumbnail
-            title="Vidvision"
-            image={Vidvision}
-            handleSelect={this.handleSelect}
-          />
-          <Thumbnail
-            title="Melillo Equities"
-            image={Melillo}
-            handleSelect={this.handleSelect}
-          />
-          <Thumbnail
-            title="Pureworld Hemp"
-            image={Pureworld}
-            handleSelect={this.handleSelect}
-          />
-        </div>
+
+        <Row
+          className="thumbnail-row"
+          type="flex"
+          justify="space-around"
+          align="middle"
+        >
+          <Col span={2}>
+          </Col>
+          <Col span={5}>
+            <Thumbnail
+              title="Vidvision"
+              image={Vidvision}
+              handleSelect={this.handleSelect}
+            />
+          </Col>
+          <Col span={5}>
+            <Thumbnail
+              title="Melillo Equities"
+              image={Melillo}
+              handleSelect={this.handleSelect}
+            />
+          </Col>
+          <Col span={5}>
+            <Thumbnail
+              title="Pureworld Hemp"
+              image={Pureworld}
+              handleSelect={this.handleSelect}
+            />
+          </Col>
+          <Col span={2}>
+          </Col>
+        </Row>
+
       </Layout>
       </div>
     )

@@ -4,14 +4,21 @@
   "private": true,
   "dependencies": {
     "antd": "^3.0.3",
+    "node-sass-chokidar": "^0.0.3",
     "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-animate-on-change": "^1.0.1",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
+    "react-slick": "^0.18.1",
     "react-social-icons": "^2.7.0",
-    "react-window-size": "^1.0.1"
+    "react-window-size": "^1.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
