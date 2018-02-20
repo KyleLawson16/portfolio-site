@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './assets/css/App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 import Biography from './containers/biography';
@@ -18,11 +18,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-        <div>
-          <Portfolio />
-        </div>
-      </BrowserRouter>
+      <div>
+        <Route path="/" component={Portfolio}/>
+      </div>
     );
   }
 }
