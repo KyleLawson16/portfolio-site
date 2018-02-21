@@ -16,6 +16,7 @@ class Thumbnail extends Component {
     return (
       <div
         onClick={this.handleSelect}
+        style={{ backgroundColor: 'transparent',}}
       >
         <h1 className="thumbnail-title">{this.props.title}</h1>
       </div>

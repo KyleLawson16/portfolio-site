@@ -4,12 +4,13 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import VidvisionGIF from '../assets/images/vidvision.gif';
+import VidvisionGIF from '../assets/images/vidvision2.gif';
 import Vidvision from '../assets/images/vidvision.png';
-import MelilloGIF from '../assets/images/melillo.gif';
+import MelilloGIF from '../assets/images/melillo2.gif';
 import Melillo from '../assets/images/melillo.png';
-import PureworldGIF from '../assets/images/pureworld.gif';
+import PureworldGIF from '../assets/images/pureworld2.gif';
 import Pureworld from '../assets/images/pureworld.png';
+import ProjectBoard from '../assets/images/project_board.jpg';
 
 import Jumbotron from '../components/Jumbotron';
 import Thumbnail from '../components/Thumbnail';
@@ -137,8 +138,42 @@ class Portfolio extends Component {
         <div>
           <img src={Background} style={{ width: '100%', position: 'relative' }} />
         </div>
+        <div
+          className="project-board"
+          style={{ top: (0.16 * this.props.windowHeight) + (this.props.windowWidth / 50) }}
+        >
+          <img
+            src={ProjectBoard}
+            style={{ width: '100%' }}
+          />
+        <div className="project-board-text">
+          <h1 className="thumbnail-title project-header">My Projects</h1>
+          <Thumbnail
+            title="Vidvision"
+            image={Vidvision}
+            gif={VidvisionGIF}
+            link="https://www.getvidvision.com/"
+            handleSelect={this.handleSelect}
+          />
+          <Thumbnail
+            title="Melillo Equities"
+            image={Melillo}
+            gif={MelilloGIF}
+            link="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
+            handleSelect={this.handleSelect}
+          />
+          <Thumbnail
+            title="Pureworld Hemp"
+            image={Pureworld}
+            gif={PureworldGIF}
+            link="http://blog.pureworldshop.com/"
+            handleSelect={this.handleSelect}
+          />
+        </div>
+        </div>
 
         {this.renderJumbotron()}
+
 
 
         <Row
@@ -150,31 +185,13 @@ class Portfolio extends Component {
           <Col span={2}>
           </Col>
           <Col span={5}>
-            <Thumbnail
-              title="Vidvision"
-              image={Vidvision}
-              gif={VidvisionGIF}
-              link="https://www.getvidvision.com/"
-              handleSelect={this.handleSelect}
-            />
+
           </Col>
           <Col span={5}>
-            <Thumbnail
-              title="Melillo Equities"
-              image={Melillo}
-              gif={MelilloGIF}
-              link="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
-              handleSelect={this.handleSelect}
-            />
+
           </Col>
           <Col span={5}>
-            <Thumbnail
-              title="Pureworld Hemp"
-              image={Pureworld}
-              gif={PureworldGIF}
-              link="http://blog.pureworldshop.com/"
-              handleSelect={this.handleSelect}
-            />
+
           </Col>
           <Col span={2}>
           </Col>

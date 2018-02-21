@@ -152,13 +152,40 @@
   to {
     opacity: 0.95; } }
 
+.project-board-text {
+  position: absolute;
+  left: 43%;
+  top: 20%;
+  background-color: transparent;
+  -ms-transform: rotate(-2deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-2deg);
+  /* Safari */
+  transform: rotate(-2deg);
+  /* Standard syntax */ }
+
 .thumbnail-row {
   text-align: center;
   margin-top: -5vw;
   margin-bottom: 20px; }
 
 .thumbnail-title {
-  font-size: 2.3vw; }
+  font-size: 0.85vw;
+  background-color: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 200;
+  padding-left: 2%; }
+
+.project-header {
+  font-size: 1.2vw;
+  text-decoration: underline;
+  padding-left: 0; }
 
 .thumbnail-title:hover {
   cursor: pointer; }
+
+.project-board {
+  width: 24vw;
+  position: absolute;
+  right: 4vw;
+  box-shadow: 6px 4px 20px 2px #ccc; }
