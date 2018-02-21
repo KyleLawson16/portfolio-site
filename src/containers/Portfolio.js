@@ -154,6 +154,7 @@ class Portfolio extends Component {
             gif={VidvisionGIF}
             link="https://www.getvidvision.com/"
             handleSelect={this.handleSelect}
+            active={this.state.jumbotronTitle}
           />
           <Thumbnail
             title="Melillo Equities"
@@ -161,6 +162,7 @@ class Portfolio extends Component {
             gif={MelilloGIF}
             link="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
             handleSelect={this.handleSelect}
+            active={this.state.jumbotronTitle}
           />
           <Thumbnail
             title="Pureworld Hemp"
@@ -168,6 +170,7 @@ class Portfolio extends Component {
             gif={PureworldGIF}
             link="http://blog.pureworldshop.com/"
             handleSelect={this.handleSelect}
+            active={this.state.jumbotronTitle}
           />
         <h1 className="thumbnail-title project-click">"click me"</h1>
         </div>

@@ -190,6 +190,9 @@
 .thumbnail-title:hover {
   cursor: pointer; }
 
+.thumbnail-active {
+  background-color: yellow; }
+
 .project-click:hover {
   cursor: default; }
 
