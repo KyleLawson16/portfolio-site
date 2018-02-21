@@ -4,11 +4,11 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import VidvisionGIF from '../assets/images/vidvision2.gif';
+import VidvisionGIF from '../assets/images/vidvision.gif';
 import Vidvision from '../assets/images/vidvision.png';
-import MelilloGIF from '../assets/images/melillo2.gif';
+import MelilloGIF from '../assets/images/melillo.gif';
 import Melillo from '../assets/images/melillo.png';
-import PureworldGIF from '../assets/images/pureworld2.gif';
+import PureworldGIF from '../assets/images/pureworld.gif';
 import Pureworld from '../assets/images/pureworld.png';
 import ProjectBoard from '../assets/images/project_board.jpg';
 
@@ -169,6 +169,7 @@ class Portfolio extends Component {
             link="http://blog.pureworldshop.com/"
             handleSelect={this.handleSelect}
           />
+        <h1 className="thumbnail-title project-click">"click me"</h1>
         </div>
         </div>
 
@@ -196,7 +197,7 @@ class Portfolio extends Component {
           <Col span={2}>
           </Col>
         </Row>
-        <Row justify="space-around" align="middle" style={{ marginBottom: 20 }}>
+        <Row justify="space-around" align="middle" style={{ marginBottom: 20, marginTop: '-1.5vw' }}>
           <Col span={24} style={{ textAlign: 'center' }}>
             {this.renderSocialIcons()}
           </Col>
