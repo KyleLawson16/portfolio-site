@@ -99,13 +99,13 @@ class Portfolio extends Component {
             />
             <Thumbnail
               title="Melillo Equities"
-              src="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
+              src="https://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
               handleSelect={this.handleSelect}
               active={this.state.jumbotronTitle}
             />
             <Thumbnail
               title="Pureworld Hemp"
-              src="http://blog.pureworldshop.com/"
+              src="https://pure-world-staging.herokuapp.com/"
               handleSelect={this.handleSelect}
               active={this.state.jumbotronTitle}
             />
