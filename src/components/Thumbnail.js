@@ -11,7 +11,7 @@ class Thumbnail extends Component {
   }
 
   handleSelect() {
-    this.props.handleSelect(this.props.title, this.props.image, this.props.gif, this.props.link);
+    this.props.handleSelect(this.props.title, this.props.src);
   }
 
   render() {

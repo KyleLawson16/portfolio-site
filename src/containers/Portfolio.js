@@ -4,13 +4,8 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import VidvisionGIF from '../assets/images/vidvision.gif';
-import Vidvision from '../assets/images/vidvision.png';
-import MelilloGIF from '../assets/images/melillo.gif';
-import Melillo from '../assets/images/melillo.png';
-import PureworldGIF from '../assets/images/pureworld.gif';
-import Pureworld from '../assets/images/pureworld.png';
 import ProjectBoard from '../assets/images/project_board.jpg';
+import Name from '../assets/images/name.png';
 
 import Jumbotron from '../components/Jumbotron';
 import Thumbnail from '../components/Thumbnail';
@@ -21,11 +16,8 @@ class Portfolio extends Component {
     super(props);
 
     this.state = {
-      jumbotronImage: Vidvision,
-      jumbotronGIF: VidvisionGIF,
       jumbotronTitle: "Vidvision",
-      jumbotronLink: "https://www.getvidvision.com/",
-      opacity: 0,
+      jumbotronSrc: "https://www.getvidvision.com/",
     };
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -42,7 +34,7 @@ class Portfolio extends Component {
     return _.map(icons, icon => {
       return (
         <SocialIcons
-        style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center'}}
+          style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center'}}
           key={icon.name}
           url={icon.url}
           color="A4A4A4"
@@ -55,62 +47,12 @@ class Portfolio extends Component {
     });
   }
 
-  handleSelect(title, image, gif, link) {
+  handleSelect(title, src) {
     this.setState({
-      opacity: 0,
-      jumbotronImage: image,
-      jumbotronGIF: gif,
       jumbotronTitle: title,
-      jumbotronLink: link,
+      jumbotronSrc: src,
     });
-    this.renderJumbotron()
   }
-  imageLoadHandler() {
-    console.log('loaded');
-    this.setState({ opacity: 1 });
-  }
-
-  renderJumbotron() {
-    return (
-      <div className="jumbotron">
-      <a href={this.state.jumbotronLink} target="__blank">
-        <img
-          src={this.state.jumbotronImage}
-          className="jumbo-image"
-          style={{
-            position: 'absolute',
-            width: (0.359 * this.props.windowWidth),
-            left: (0.3085 * this.props.windowWidth),
-            top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50)
-          }}
-        />
-        <img
-          src={this.state.jumbotronGIF}
-          onLoad={this.imageLoadHandler.bind(this)}
-          className="jumbo-image"
-          style={{
-            position: 'absolute',
-            width: (0.359 * this.props.windowWidth),
-            left: (0.3085 * this.props.windowWidth),
-            top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
-            opacity: this.state.opacity,
-            zIndex: 99999,
-          }}
-        />
-      </a>
-      </div>
-
-    )
-  }
-  // <Jumbotron
-  //   top={(0.18 * this.props.windowHeight) + (this.props.windowWidth / 50) }
-  //   left={(0.3085 * this.props.windowWidth)}
-  //   width={(0.359 * this.props.windowWidth)}
-  //   image={this.state.jumbotronImage}
-  //   gif={this.state.jumbotronGIF}
-  //   title={this.state.jumbotronTitle}
-  //   link={this.state.jumbotronLink}
-  // />
 
   render() {
     return (
@@ -122,12 +64,13 @@ class Portfolio extends Component {
           marginTop: '-3vh'
         }}
       >
-        <h1
+        <img
           style={{
-            paddingTop: (20000 / this.props.windowWidth) + (20000 / this.props.windowWidth) - 30
+            paddingTop: (20000 / this.props.windowWidth) + (20000 / this.props.windowWidth) + 15
           }}
           className="main-heading"
-        >Kyle Lawson</h1>
+          src={Name}
+        />
       </div>
       <Layout
         style={{
@@ -146,61 +89,46 @@ class Portfolio extends Component {
             src={ProjectBoard}
             style={{ width: '100%' }}
           />
-        <div className="project-board-text">
-          <h1 className="thumbnail-title project-header">My Projects</h1>
-          <Thumbnail
-            title="Vidvision"
-            image={Vidvision}
-            gif={VidvisionGIF}
-            link="https://www.getvidvision.com/"
-            handleSelect={this.handleSelect}
-            active={this.state.jumbotronTitle}
-          />
-          <Thumbnail
-            title="Melillo Equities"
-            image={Melillo}
-            gif={MelilloGIF}
-            link="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
-            handleSelect={this.handleSelect}
-            active={this.state.jumbotronTitle}
-          />
-          <Thumbnail
-            title="Pureworld Hemp"
-            image={Pureworld}
-            gif={PureworldGIF}
-            link="http://blog.pureworldshop.com/"
-            handleSelect={this.handleSelect}
-            active={this.state.jumbotronTitle}
-          />
-        <h1 className="thumbnail-title project-click">"click me"</h1>
-        </div>
+          <div className="project-board-text">
+            <h1 className="thumbnail-title project-header">My Projects</h1>
+            <Thumbnail
+              title="Vidvision"
+              src="https://www.getvidvision.com/"
+              handleSelect={this.handleSelect}
+              active={this.state.jumbotronTitle}
+            />
+            <Thumbnail
+              title="Melillo Equities"
+              src="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
+              handleSelect={this.handleSelect}
+              active={this.state.jumbotronTitle}
+            />
+            <Thumbnail
+              title="Pureworld Hemp"
+              src="http://blog.pureworldshop.com/"
+              handleSelect={this.handleSelect}
+              active={this.state.jumbotronTitle}
+            />
+            <h1 className="thumbnail-title project-click">"click me"</h1>
+          </div>
         </div>
 
-        {this.renderJumbotron()}
+        <div className="jumbotron">
+          <iframe
+            style={{
+              position: 'absolute',
+              width: (0.359 * this.props.windowWidth) * 1 / .45,
+              left: (0.3085 * this.props.windowWidth),
+              top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
+              height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .45
+            }}
+            className="frame"
+            src={this.state.jumbotronSrc}
+            frameborder="0">
+          </iframe>
+        </div>
 
-
-
-        <Row
-          className="thumbnail-row"
-          type="flex"
-          justify="space-around"
-          align="middle"
-        >
-          <Col span={2}>
-          </Col>
-          <Col span={5}>
-
-          </Col>
-          <Col span={5}>
-
-          </Col>
-          <Col span={5}>
-
-          </Col>
-          <Col span={2}>
-          </Col>
-        </Row>
-        <Row justify="space-around" align="middle" style={{ marginBottom: 20, marginTop: '-1.5vw' }}>
+        <Row justify="space-around" align="middle" style={{ marginBottom: 10, marginTop: '-5vw' }}>
           <Col span={24} style={{ textAlign: 'center' }}>
             {this.renderSocialIcons()}
           </Col>

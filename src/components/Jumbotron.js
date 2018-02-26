@@ -3,50 +3,17 @@ import React, { Component } from 'react';
 class Jumbotron extends Component {
   constructor(props) {
     super(props);
-    this.state = { opacity: 0 };
   }
-  componentDidMount() {
-    this.setState({ opacity: 0 });
-  }
-  componentWillReceiveProps(nextProps) {
-    return (
-      <div className="jumbotron">
-      <a href={this.props.link} target="__blank">
-        <img
-          src={this.props.image}
-          className="jumbo-image"
-          style={{
-            position: 'absolute',
-            width: this.props.width,
-            left: this.props.left,
-            top: this.props.top
-          }}
-        />
-        <img
-          src={this.props.gif}
-          onLoad={this.imageLoadHandler.bind(this)}
-          className="jumbo-image"
-          style={{
-            position: 'absolute',
-            width: this.props.width,
-            left: this.props.left,
-            top: this.props.top,
-            opacity: this.state.opacity,
-            zIndex: 99999,
-          }}
-        />
-      </a>
-      </div>
-    )
-  }
-  imageLoadHandler() {
-    console.log('loaded');
-    this.setState({ opacity: 1 });
-  }
+
   render() {
     return (
-      <div>
-        {this.componentWillReceiveProps()}
+      <div className="jumbotron">
+        <iframe className="jumbo-image" style={{
+          position: 'absolute',
+          width: (0.359 * this.props.windowWidth),
+          left: (0.3085 * this.props.windowWidth),
+          top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50)
+        }} src="http://melillo-equities-dev-builtbykingwilllycom.netlify.com/" ></iframe>
       </div>
     )
   }

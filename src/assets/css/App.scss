@@ -152,9 +152,10 @@
 
 .main-heading {
   padding-top: 0px;
-  font-size: 8.3vw;
-  font-family: 'Polya';
-  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   z-index: 9999;
   animation: fade-in 3s ease-in;
   opacity: 0.95;
@@ -212,3 +213,14 @@
   right: 4vw;
   box-shadow: 6px 4px 20px 2px #ccc;
 }
+
+.frame { -ms-transform: scale(0.45);
+    -moz-transform: scale(0.45);
+    -o-transform: scale(0.45);
+    -webkit-transform: scale(0.45);
+    transform: scale(0.45);
+    -ms-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;}
