@@ -229,7 +229,7 @@ html {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   .desk-photo {
     width: 200%;
     left: -47%; }

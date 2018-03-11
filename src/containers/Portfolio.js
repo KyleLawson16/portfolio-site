@@ -124,7 +124,7 @@ class Portfolio extends Component {
         </div>
 
         <div className="jumbotron">
-          {this.props.windowWidth > 1000
+          {this.props.windowWidth > 1100
           ?
           <iframe
             style={{
