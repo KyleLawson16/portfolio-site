@@ -25,15 +25,30 @@ class SocialIcons extends Component {
   }
 
   render() {
-    return (
-      <SocialIcon
-        url={this.props.url}
-        className="social-icons"
-        color={this.state.social_color}
-        style={{ width: this.props.width, height: this.props.height, marginRight: this.props.marginRight }}
-        onMouseEnter={this.hoverSocial}
-        onMouseLeave={this.noHoverSocial} />
-    );
+    if (this.props.name == "mail") {
+      return (
+        <SocialIcon
+          url={this.props.url}
+          className="social-icons"
+          color={this.state.social_color}
+          style={{ width: this.props.width, height: this.props.height, marginRight: this.props.marginRight }}
+          onMouseEnter={this.hoverSocial}
+          onMouseLeave={this.noHoverSocial}
+          network="email" />
+      )
+    }
+    else {
+      return (
+        <SocialIcon
+          url={this.props.url}
+          className="social-icons"
+          color={this.state.social_color}
+          style={{ width: this.props.width, height: this.props.height, marginRight: this.props.marginRight }}
+          onMouseEnter={this.hoverSocial}
+          onMouseLeave={this.noHoverSocial} />
+      );
+    }
+
   }
 }
 

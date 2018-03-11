@@ -159,6 +159,11 @@ html {
 
 /* Thumbnails */
 
+.desk-photo {
+  width: 100%;
+  position: relative;
+}
+
 .main-heading {
   padding-top: 0px;
   width: 60%;
@@ -222,6 +227,7 @@ html {
   position: absolute;
   right: 5vw;
   box-shadow: 6px 4px 20px 2px #ccc;
+  z-index: 9999;
 }
 
 .frame { -ms-transform: scale(0.45);
@@ -233,4 +239,41 @@ html {
       -moz-transform-origin: 0 0;
       -o-transform-origin: 0 0;
       -webkit-transform-origin: 0 0;
-      transform-origin: 0 0;}
+      transform-origin: 0 0;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  .desk-photo {
+    width: 200%;
+    left: -47%;
+  }
+  .project-board {
+    width: 60%;
+    height: 43vw;
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    box-shadow: 6px 4px 20px 2px #ccc;
+  }
+  .project-board-text {
+    left: 54%;
+    top: 140px;
+    margin-top: 8vw;
+  }
+  .thumbnail-title {
+    font-size: 2vw;
+  }
+  .project-header {
+    font-size: 2.5vw;
+  }
+  .project-click {
+    font-size: 2.7vw;
+    padding-left: 9%;
+    margin-top: 10%;
+    color: red;
+  }
+}
