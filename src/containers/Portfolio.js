@@ -4,7 +4,7 @@ import windowSize from 'react-window-size';
 import _ from 'lodash';
 
 import Background from "../assets/images/background.png";
-import ProjectBoard from '../assets/images/project_board.jpg';
+import ProjectBoard from '../assets/images/board-2.png';
 import Name from '../assets/images/name.png';
 
 import Jumbotron from '../components/Jumbotron';
@@ -16,8 +16,8 @@ class Portfolio extends Component {
     super(props);
 
     this.state = {
-      jumbotronTitle: "Vidvision",
-      jumbotronSrc: "https://www.getvidvision.com/",
+      jumbotronTitle: "LOU Assistant",
+      jumbotronSrc: "https://www.louassistant.com/",
     };
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -83,14 +83,20 @@ class Portfolio extends Component {
         </div>
         <div
           className="project-board"
-          style={{ top: (0.16 * this.props.windowHeight) + (this.props.windowWidth / 50) }}
+          style={{ top: (0.15 * this.props.windowHeight) + (this.props.windowWidth / 50) }}
         >
           <img
             src={ProjectBoard}
-            style={{ width: '100%' }}
+            style={{ width: '100%', height: '100%' }}
           />
           <div className="project-board-text">
             <h1 className="thumbnail-title project-header">My Projects</h1>
+            <Thumbnail
+              title="LOU Assistant"
+              src="https://www.louassistant.com/"
+              handleSelect={this.handleSelect}
+              active={this.state.jumbotronTitle}
+            />
             <Thumbnail
               title="Vidvision"
               src="https://www.getvidvision.com/"

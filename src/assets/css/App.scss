@@ -3,6 +3,15 @@
     src: url("../fonts/POLYA.woff") format('woff');
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .App {
   text-align: center;
 }
@@ -167,7 +176,7 @@
 }
 .project-board-text {
   position: absolute;
-  left: 43%;
+  left: 56%;
   top: 20%;
   background-color: transparent;
   -ms-transform: rotate(-2deg); /* IE 9 */
@@ -192,9 +201,9 @@
   padding-left: 0;
 }
 .project-click {
-  font-size: 1.1vw;
-  padding-left: 20%;
-  margin-top: 22%;
+  font-size: 1.25vw;
+  padding-left: 6%;
+  margin-top: 8%;
   color: red;
 }
 .thumbnail-title:hover {
@@ -209,8 +218,9 @@
 
 .project-board {
   width: 24vw;
+  height: 17vw;
   position: absolute;
-  right: 4vw;
+  right: 5vw;
   box-shadow: 6px 4px 20px 2px #ccc;
 }
 
