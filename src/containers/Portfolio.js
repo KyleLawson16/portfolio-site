@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { Layout, Footer, Row, Col } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import windowSize from 'react-window-size';
 import _ from 'lodash';
+import {BrowserView, MobileView, isBrowser, isMobile} from 'react-device-detect';
 
 import Background from "../assets/images/background.png";
 import ProjectBoard from '../assets/images/board-2.png';
 import Name from '../assets/images/name.png';
+import Melillo from '../assets/images/melillo.png';
+import Vidvision from '../assets/images/vidvision.png';
+import Pureworld from '../assets/images/pureworld.png';
 
-import Jumbotron from '../components/Jumbotron';
 import Thumbnail from '../components/Thumbnail';
 import SocialIcons from '../components/social_icons';
 
@@ -49,10 +52,11 @@ class Portfolio extends Component {
     });
   }
 
-  handleSelect(title, src) {
+  handleSelect(title, src, imageSrc) {
     this.setState({
       jumbotronTitle: title,
       jumbotronSrc: src,
+      jumbotronImageSrc: imageSrc,
     });
   }
 
@@ -93,24 +97,28 @@ class Portfolio extends Component {
           <Thumbnail
             title="LOU Assistant"
             src="https://www.louassistant.com/"
+            imageSrc={Melillo}
             handleSelect={this.handleSelect}
             active={this.state.jumbotronTitle}
           />
           <Thumbnail
             title="Vidvision"
             src="https://www.getvidvision.com/"
+            imageSrc={Vidvision}
             handleSelect={this.handleSelect}
             active={this.state.jumbotronTitle}
           />
           <Thumbnail
             title="Melillo Equities"
             src="https://melillo-equities-dev-builtbykingwilllycom.netlify.com/"
+            imageSrc={Melillo}
             handleSelect={this.handleSelect}
             active={this.state.jumbotronTitle}
           />
           <Thumbnail
             title="Pureworld Hemp"
             src="https://pure-world-staging.herokuapp.com/"
+            imageSrc={Pureworld}
             handleSelect={this.handleSelect}
             active={this.state.jumbotronTitle}
           />
@@ -122,37 +130,52 @@ class Portfolio extends Component {
 
 
         </div>
-
-        <div className="jumbotron">
-          {this.props.windowWidth > 1100
-          ?
-          <iframe
-            style={{
-              position: 'absolute',
-              width: (0.359 * this.props.windowWidth) * 1 / .45,
-              left: (0.3085 * this.props.windowWidth),
-              top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
-              height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .45
-            }}
-            className="frame"
-            src={this.state.jumbotronSrc}
-            frameborder="0">
-          </iframe>
-          :
-          <iframe
-            style={{
-              position: 'absolute',
-              width: (0.72 * this.props.windowWidth) * 1 / .45,
-              left: (0.146 * this.props.windowWidth),
-              top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
-              height: (0.359 * this.props.windowWidth) * 1.17 * 1 / .45
-            }}
-            className="frame"
-            src={this.state.jumbotronSrc}
-            frameborder="0">
-          </iframe>
-          }
-        </div>
+        <BrowserView device={isBrowser}>
+          <div className="jumbotron">
+            {this.props.windowWidth > 1000
+            ?
+            <iframe
+              style={{
+                position: 'absolute',
+                width: (0.359 * this.props.windowWidth) * 1 / .45,
+                left: (0.3085 * this.props.windowWidth),
+                top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
+                height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .45
+              }}
+              className="frame"
+              src={this.state.jumbotronSrc}
+              frameBorder="0">
+            </iframe>
+            :
+            <iframe
+              style={{
+                position: 'absolute',
+                width: (0.72 * this.props.windowWidth) * 1 / .45,
+                left: (0.146 * this.props.windowWidth),
+                top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
+                height: (0.359 * this.props.windowWidth) * 1.17 * 1 / .45
+              }}
+              className="frame"
+              src={this.state.jumbotronSrc}
+              frameBorder="0">
+            </iframe>
+            }
+          </div>
+        </BrowserView>
+        <MobileView device={isMobile}>
+          <div className="jumbotron">
+            <img
+              style={{
+                position: 'absolute',
+                width: (0.359 * this.props.windowWidth) * 1 / .45,
+                left: (0.3085 * this.props.windowWidth),
+                top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
+                height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .45
+              }}
+              className="frame"
+              src={this.state.jumbotronImageSrc} />
+          </div>
+        </MobileView>
 
         <Row justify="space-around" align="middle" style={{ marginBottom: 10, marginTop: '-5vw' }}>
           <Col span={24} style={{ textAlign: 'center' }}>

@@ -25,7 +25,7 @@ class SocialIcons extends Component {
   }
 
   render() {
-    if (this.props.name == "mail") {
+    if (this.props.name === "mail") {
       return (
         <SocialIcon
           url={this.props.url}
