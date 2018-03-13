@@ -68,7 +68,7 @@ class Portfolio extends Component {
       <div
         style={{
           width: '100%',
-          height: (0.21 * this.props.windowHeight),
+          height: '21vh',
           marginTop: '-3vh',
         }}
       >
