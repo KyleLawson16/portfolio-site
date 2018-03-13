@@ -164,14 +164,17 @@ class Portfolio extends Component {
           </div>
         </BrowserView>
         <MobileView device={isMobile}>
-          <div className="jumbotron">
+          <div style={{
+            position: 'absolute',
+            width: (0.324 * this.props.windowWidth) * 1 / .45,
+            left: (0.146 * this.props.windowWidth),
+            top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
+            height: (0.159 * this.props.windowWidth) * 1.17 * 1 / .45
+          }}>
             <img
               style={{
-                position: 'absolute',
-                width: (0.72 * this.props.windowWidth) * 1 / .45,
-                left: (0.146 * this.props.windowWidth),
-                top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
-                height: (0.359 * this.props.windowWidth) * 1.17 * 1 / .45
+                width: '100%',
+                height: '100%',
               }}
               src={this.state.jumbotronImageSrc} />
           </div>
