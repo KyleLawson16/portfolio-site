@@ -149,8 +149,8 @@ html {
   position: relative; }
 
 .main-heading {
-  padding-top: 0px;
-  width: 60%;
+  padding-top: 50px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -254,4 +254,6 @@ html {
     font-size: 2.7vw;
     padding-left: 9%;
     margin-top: 10%;
-    color: red; } }
+    color: red; }
+  .main-heading {
+    width: 70%; } }

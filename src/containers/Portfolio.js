@@ -7,6 +7,7 @@ import {BrowserView, MobileView, isBrowser, isMobile} from 'react-device-detect'
 import Background from "../assets/images/background.png";
 import ProjectBoard from '../assets/images/board-2.png';
 import Name from '../assets/images/name.png';
+import Lou from '../assets/images/lou.png';
 import Melillo from '../assets/images/melillo.png';
 import Vidvision from '../assets/images/vidvision.png';
 import Pureworld from '../assets/images/pureworld.png';
@@ -21,7 +22,7 @@ class Portfolio extends Component {
     this.state = {
       jumbotronTitle: "LOU Assistant",
       jumbotronSrc: "https://www.louassistant.com/",
-      jumbotronImageSrc: false,
+      jumbotronImageSrc: '../assets/images/lou.png',
     };
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -68,26 +69,23 @@ class Portfolio extends Component {
         style={{
           width: '100%',
           height: (0.21 * this.props.windowHeight),
-          marginTop: '-3vh'
+          marginTop: '-3vh',
         }}
       >
         <img
-          style={{
-            paddingTop: (20000 / this.props.windowWidth) + (20000 / this.props.windowWidth) + 15
-          }}
           className="main-heading"
           src={Name}
         />
       </div>
       <Layout
         style={{
-          minHeight: (this.props.windowHeight - (0.21 * this.props.windowHeight)),
+          minHeight: '79vh',
           backgroundColor: 'white',
         }}
       >
       <div
         className="project-board"
-        style={{ top: (0.15 * this.props.windowHeight) + (this.props.windowWidth / 50) }}
+        style={{ top: '15vh' }}
       >
         <img
           src={ProjectBoard}
@@ -168,7 +166,8 @@ class Portfolio extends Component {
             position: 'absolute',
             width: '72vw',
             left: '14.6vw',
-            top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
+            top: '21.3vh',
+            marginTop: '47.2vw',
             height: '41.34vw'
           }}>
             <img
