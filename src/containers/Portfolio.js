@@ -164,7 +164,7 @@ class Portfolio extends Component {
           </div>
         </BrowserView>
         <MobileView device={isMobile}>
-          {this.props.windowWidth > 2000
+          {this.props.windowWidth > 1500
           ?
           <div style={{
             position: 'absolute',

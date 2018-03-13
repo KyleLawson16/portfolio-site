@@ -6000,6 +6000,10 @@ react-transition-group@^1.2.0:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
+react-window-dimensions@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-window-dimensions/-/react-window-dimensions-1.0.1.tgz#35116bc9b8a471ab6293ad3fdc4a3f14eb47092c"
+
 react-window-size@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-window-size/-/react-window-size-1.0.1.tgz#c5e0e52602049ae9fb2c230626a8d1ce9ed8e3e4"
