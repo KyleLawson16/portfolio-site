@@ -21,7 +21,7 @@ class Portfolio extends Component {
     this.state = {
       jumbotronTitle: "LOU Assistant",
       jumbotronSrc: "https://www.louassistant.com/",
-      jumbotronImageSrc: {Melillo},
+      jumbotronImageSrc: false,
     };
 
     this.handleSelect = this.handleSelect.bind(this);
