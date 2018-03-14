@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'antd';
 
 class Thumbnail extends Component {
   constructor(props) {
@@ -15,7 +14,7 @@ class Thumbnail extends Component {
   }
 
   render() {
-    if (this.props.active == this.props.title) {
+    if (this.props.active === this.props.title) {
     return (
       <div
         onClick={this.handleSelect}

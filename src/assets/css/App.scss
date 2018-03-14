@@ -3,10 +3,15 @@
     src: url("../fonts/POLYA.woff") format('woff');
 }
 
-html {
+body {
   overflow: scroll;
   overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -261,8 +266,9 @@ html {
   }
   .project-board-text {
     left: 54%;
-    top: 140px;
+    top: 20vh;
     margin-top: 8vw;
+    width: 18.1%;
   }
   .thumbnail-title {
     font-size: 2vw;

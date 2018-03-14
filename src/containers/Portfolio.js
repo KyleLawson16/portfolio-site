@@ -22,7 +22,7 @@ class Portfolio extends Component {
     this.state = {
       jumbotronTitle: "LOU Assistant",
       jumbotronSrc: "https://www.louassistant.com/",
-      jumbotronImageSrc: '../assets/images/lou.png',
+      jumbotronImageSrc: Lou,
     };
 
     this.handleSelect = this.handleSelect.bind(this);
@@ -75,6 +75,7 @@ class Portfolio extends Component {
         <img
           className="main-heading"
           src={Name}
+          alt="KyleLawson"
         />
       </div>
       <Layout
@@ -90,6 +91,7 @@ class Portfolio extends Component {
         <img
           src={ProjectBoard}
           style={{ width: '100%', height: '100%' }}
+          alt="project-board"
         />
         <div className="project-board-text">
           <h1 className="thumbnail-title project-header">My Projects</h1>
@@ -125,9 +127,10 @@ class Portfolio extends Component {
         </div>
         </div>
         <div>
-          <img src={Background} className="desk-photo" />
-
-
+          <img
+            src={Background}
+            className="desk-photo"
+            alt="desk" />
         </div>
         <BrowserView device={isBrowser}>
           <div className="jumbotron">
@@ -143,7 +146,8 @@ class Portfolio extends Component {
               }}
               className="frame"
               src={this.state.jumbotronSrc}
-              frameBorder="0">
+              frameBorder="0"
+              title="large-computer-screen">
             </iframe>
             :
             <iframe
@@ -156,7 +160,8 @@ class Portfolio extends Component {
               }}
               className="frame"
               src={this.state.jumbotronSrc}
-              frameBorder="0">
+              frameBorder="0"
+              title="small-computer-screen">
             </iframe>
             }
           </div>
@@ -175,7 +180,8 @@ class Portfolio extends Component {
                 width: '100%',
                 height: '100%',
               }}
-              src={this.state.jumbotronImageSrc} />
+              src={this.state.jumbotronImageSrc}
+              alt="mobile-computer-screen" />
           </div>
         </MobileView>
 
