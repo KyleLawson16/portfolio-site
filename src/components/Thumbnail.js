@@ -10,17 +10,17 @@ class Thumbnail extends Component {
   }
 
   handleSelect() {
-    this.props.handleSelect(this.props.title, this.props.src, this.props.imageSrc);
+    this.props.handleSelect(this.props.index);
   }
 
   render() {
-    if (this.props.active === this.props.title) {
+    if (this.props.active) {
     return (
       <div
         onClick={this.handleSelect}
         style={{ backgroundColor: 'transparent',}}
       >
-        <h1 className="thumbnail-title thumbnail-active">{this.props.title}</h1>
+        <h1 className="thumbnail__title thumbnail__title--active">{this.props.title}</h1>
       </div>
     )
     }
@@ -30,7 +30,7 @@ class Thumbnail extends Component {
           onClick={this.handleSelect}
           style={{ backgroundColor: 'transparent',}}
         >
-          <h1 className="thumbnail-title">{this.props.title}</h1>
+          <h1 className="thumbnail__title">{this.props.title}</h1>
         </div>
       )
 

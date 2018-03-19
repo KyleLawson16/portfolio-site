@@ -72,87 +72,35 @@ body {
 .ant-layout-sider-trigger {
   background-color: blue; }
 
-.home-background {
-  background: linear-gradient(to bottom right, blue, #00ffc2); }
+.ant-modal {
+  width: 60% !important;
+  min-width: 400px;
+  z-index: 9999; }
 
-.home-background-2 {
-  background: linear-gradient(to bottom right, red, yellow);
-  animation: change-background 10s infinite;
-  animation-timing-function: linear;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0; }
+.ant-modal-body {
+  padding: 0px !important; }
 
-@keyframes change-background {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+.ant-modal-content {
+  border-radius: 0px !important; }
 
-.heading-large {
-  font-family: 'Raleway:900', sans-serif;
-  font-size: 40px;
-  position: absolute;
-  right: 10px;
-  bottom: 0px;
-  margin-bottom: 0px;
-  z-index: 99999;
-  color: #fff; }
+.ant-modal-mask {
+  z-index: 1001; }
 
-.hover-box {
-  width: 100%;
-  height: 50vh;
-  background-color: transparent;
-  color: white;
-  text-align: center;
-  font-size: 2vw;
-  box-shadow: 0px 0px 0px #333;
-  -webkit-box-shadow: 0px 0px 0px #333;
-  transition-duration: 1s;
-  -webkit-transition-duration: 1s; }
-
-.hover-box:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px 0px 10px #333;
-  -webkit-box-shadow: 0px 0px 10px #333;
-  transition-duration: 1s;
-  -webkit-transition-duration: 1s; }
-
-.hover-box h3 {
-  color: white;
-  padding-top: 22vh;
-  font-family: 'Raleway', sans-serif; }
-
-/* Bubbles */
-.bubble-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; }
-
-.bubble-box {
-  position: absolute;
-  transform: translate(-50%, -50%); }
-
-.bubble {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  background-color: rgba(230, 230, 230, 0.25);
-  box-shadow: 0px 0px 50px rgba(230, 230, 230, 0.5);
-  z-index: 0; }
+.ant-modal-wrap {
+  z-index: 9999;
+  background-color: transparent; }
 
 /* Thumbnails */
 .desk-photo {
   width: 100%;
   position: relative; }
 
-.main-heading {
+.name__container {
+  width: 100%;
+  height: 21vh;
+  margin-top: -3vh; }
+
+.name__img {
   padding-top: 50px;
   width: 50%;
   margin-left: auto;
@@ -163,13 +111,24 @@ body {
   opacity: 0.95;
   animation-timing-function: linear; }
 
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 0.95; } }
+.body__container {
+  min-height: 79vh;
+  background-color: white; }
 
-.project-board-text {
+.project-board__container {
+  width: 24vw;
+  height: 17vw;
+  position: absolute;
+  right: 5vw;
+  box-shadow: 6px 4px 20px 2px #ccc;
+  z-index: 1000;
+  top: 15vh; }
+
+.project-board__img {
+  width: 100%;
+  height: 100%; }
+
+.project-board__text {
   position: absolute;
   left: 56%;
   top: 20%;
@@ -181,45 +140,32 @@ body {
   transform: rotate(-2deg);
   /* Standard syntax */ }
 
-.thumbnail-row {
-  text-align: center;
-  margin-top: -5vw;
-  margin-bottom: 20px; }
-
-.thumbnail-title {
+.thumbnail__title {
   font-size: 0.85vw;
   background-color: transparent;
   font-family: 'Permanent Marker', cursive;
   font-weight: 200;
   padding-left: 2%; }
 
-.project-header {
+.thumbnail__project-header {
   font-size: 1.2vw;
   text-decoration: underline;
   padding-left: 0; }
 
-.project-click {
+.thumbnail__click-me {
   font-size: 1.25vw;
   padding-left: 6%;
   margin-top: 8%;
   color: red; }
 
-.thumbnail-title:hover {
+.thumbnail__title:hover {
   cursor: pointer; }
 
-.thumbnail-active {
+.thumbnail__title--active {
   background-color: yellow; }
 
 .project-click:hover {
   cursor: default; }
-
-.project-board {
-  width: 24vw;
-  height: 17vw;
-  position: absolute;
-  right: 5vw;
-  box-shadow: 6px 4px 20px 2px #ccc;
-  z-index: 9999; }
 
 .frame {
   -ms-transform: scale(0.45);
@@ -233,11 +179,98 @@ body {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0; }
 
+.btn__learn-more {
+  position: absolute;
+  left: 30.75vw;
+  z-index: 9999;
+  padding: .3vw;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: .3vw;
+  font-size: .8vw;
+  transition-duration: 300ms; }
+
+.btn__learn-more:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 300ms;
+  cursor: pointer; }
+
+.btn__learn-more:focus {
+  outline: none; }
+
+.btn-group__arrows {
+  position: absolute;
+  background-color: transparent;
+  left: 63.75vw;
+  z-index: 9999; }
+
+.btn__arrow {
+  padding: .3vw;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: .3vw;
+  font-size: .8vw;
+  transition-duration: 300ms;
+  height: 1.8vw; }
+
+.btn__arrow:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  transition-duration: 300ms;
+  cursor: pointer; }
+
+.btn__arrow:focus {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  transition-duration: 300ms;
+  cursor: pointer; }
+
+.footer__row {
+  margin-bottom: 10px;
+  margin-top: -5vw; }
+
+.footer__col {
+  text-align: center; }
+
+.modal__close__container {
+  float: right;
+  padding: 20px;
+  cursor: pointer; }
+
+.modal__close {
+  width: 35px;
+  margin-top: 4px;
+  margin-bottom: 2px; }
+
+.modal__close__svg {
+  enable-background: new 0 0 25 25;
+  color: #b3b3b3;
+  width: 25;
+  margin-left: 5; }
+
+.modal__photo {
+  margin-top: 0px;
+  width: 100%; }
+
+.modal__title {
+  text-align: center;
+  margin-left: 75px;
+  font-size: 40px; }
+
+.modal__content {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px; }
+
 @media only screen and (max-width: 1000px) {
   .desk-photo {
     width: 200%;
     left: -47%; }
-  .project-board {
+  .project-board__container {
     width: 60%;
     height: 43vw;
     position: static;
@@ -246,19 +279,25 @@ body {
     margin-right: auto;
     margin-bottom: 25px;
     box-shadow: 6px 4px 20px 2px #ccc; }
-  .project-board-text {
+  .project-board__text {
     left: 54%;
     top: 20vh;
     margin-top: 8vw;
     width: 18.1%; }
-  .thumbnail-title {
+  .thumbnail__title {
     font-size: 2vw; }
-  .project-header {
+  .thumbnail__project-header {
     font-size: 2.5vw; }
-  .project-click {
+  .thumbnail__click-me {
     font-size: 2.7vw;
     padding-left: 9%;
     margin-top: 10%;
     color: red; }
-  .main-heading {
+  .name__img {
     width: 70%; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.95; } }
