@@ -322,6 +322,12 @@ body {
   .name__img {
     width: 70%;
   }
+  .btn__learn-more {
+    display: none;
+  }
+  .btn-group__arrows {
+    display: none;
+  }
 }
 
 @keyframes fade-in {

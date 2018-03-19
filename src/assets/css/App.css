@@ -294,7 +294,11 @@ body {
     margin-top: 10%;
     color: red; }
   .name__img {
-    width: 70%; } }
+    width: 70%; }
+  .btn__learn-more {
+    display: none; }
+  .btn-group__arrows {
+    display: none; } }
 
 @keyframes fade-in {
   from {
