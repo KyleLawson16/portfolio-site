@@ -12,6 +12,10 @@ body {
           box-sizing: border-box;
 }
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -85,9 +89,12 @@ body {
 }
 
 .ant-modal {
-  width: 60% !important;
+  width: 70% !important;
   min-width: 400px;
   z-index: 9999;
+  padding-bottom: 0px !important;
+  margin-bottom: 50px;
+  margin-top: -50px;
 }
 .ant-modal-body {
   padding: 0px !important;
@@ -254,9 +261,10 @@ body {
   text-align: center;
 }
 
-.modal__close__container {
+.modal__container {
   float: right;
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
+  border-left: 1px solid #b3b3b3;
   cursor: pointer;
 }
 .modal__close {
@@ -267,23 +275,38 @@ body {
 .modal__close__svg {
   enable-background: new 0 0 25 25;
   color: #b3b3b3;
-  width: 25;
-  margin-left: 5;
+  width: 25px;
+  margin-left: 5px;
 }
 .modal__photo {
   margin-top: 0px;
   width: 100%;
+  height: 80%;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
 }
 .modal__title {
   text-align: center;
-  margin-left: 75px;
   font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
 }
 .modal__content {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
+}
+
+.modal__arrow--left {
+  -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.modal__arrow {
+  width: 35px;
+  margin-top: 6.5px;
+  margin-bottom: 7px;
 }
 
 @media only screen and (max-width: 1000px) {
