@@ -3,7 +3,9 @@ import LouInfo from './assets/images/lou-more-info.png';
 import Melillo from './assets/images/melillo.png';
 import MelilloInfo from './assets/images/melillo-more-info.png';
 import Vidvision from './assets/images/vidvision.png';
+import VidvisionInfo from './assets/images/vidvision-more-info.png';
 import Pureworld from './assets/images/pureworld.png';
+import PureworldInfo from './assets/images/pureworld-more-info.png';
 
 const projects = [
   {
@@ -36,7 +38,7 @@ const projects = [
     imageSrc: Vidvision,
     modal: {
       content: " ",
-      image: MelilloInfo,
+      image: VidvisionInfo,
     }
   },
   {
@@ -47,7 +49,7 @@ const projects = [
     imageSrc: Pureworld,
     modal: {
       content: " ",
-      image: MelilloInfo,
+      image: PureworldInfo,
     }
   }
 ];

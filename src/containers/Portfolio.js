@@ -127,28 +127,29 @@ class Portfolio extends Component {
               className="desk-photo"
               alt="desk"
             />
-            <button
-              className="btn__learn-more"
-              style={{
-                top: (0.173 * this.props.windowHeight) + (.25 * this.props.windowWidth),
-              }}
-              onClick={this.openModal}
-              >Learn More
-            </button>
-            <ButtonGroup
-              className="btn-group__arrows"
-              style={{
-                top: (0.173 * this.props.windowHeight) + (.25 * this.props.windowWidth),
-              }}
-            >
-              <Button className="btn__arrow" onClick={this.previousProject}>
-                <Icon type="left" />
-              </Button>
-              <Button className="btn__arrow" onClick={this.nextProject}>
-                <Icon type="right" />
-              </Button>
-            </ButtonGroup>
+
           </div>
+          <button
+            className="btn__learn-more"
+            style={{
+              top: (0.173 * this.props.windowHeight) + (.25 * this.props.windowWidth),
+            }}
+            onClick={this.openModal}
+            >Learn More
+          </button>
+          <ButtonGroup
+            className="btn-group__arrows"
+            style={{
+              top: (0.173 * this.props.windowHeight) + (.25 * this.props.windowWidth),
+            }}
+          >
+            <Button className="btn__arrow" onClick={this.previousProject}>
+              <Icon type="left" />
+            </Button>
+            <Button className="btn__arrow" onClick={this.nextProject}>
+              <Icon type="right" />
+            </Button>
+          </ButtonGroup>
           <Screen
             src={this.state.activeProject.src}
             imageSrc={this.state.activeProject.imageSrc}

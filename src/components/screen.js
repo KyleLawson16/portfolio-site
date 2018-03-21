@@ -13,10 +13,10 @@ class Screen extends Component {
             <iframe
               style={{
                 position: 'absolute',
-                width: (0.359 * this.props.windowWidth) * 1 / .45,
+                width: (0.359 * this.props.windowWidth) * 1 / .38,
                 left: (0.3085 * this.props.windowWidth),
                 top: (0.18 * this.props.windowHeight) + (this.props.windowWidth / 50),
-                height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .45
+                height: (0.359 * this.props.windowWidth) * 0.585 * 1 / .38
               }}
               className="frame"
               src={this.props.src}
@@ -27,10 +27,10 @@ class Screen extends Component {
             <iframe
               style={{
                 position: 'absolute',
-                width: (0.72 * this.props.windowWidth) * 1 / .45,
+                width: (0.72 * this.props.windowWidth) * 1 / .38,
                 left: (0.146 * this.props.windowWidth),
                 top: (0.183 * this.props.windowHeight) + ((this.props.windowWidth + 700 - this.props.windowWidth) / 30) + (.47 * this.props.windowWidth),
-                height: (0.359 * this.props.windowWidth) * 1.17 * 1 / .45
+                height: (0.359 * this.props.windowWidth) * 1.17 * 1 / .38
               }}
               className="frame"
               src={this.props.src}

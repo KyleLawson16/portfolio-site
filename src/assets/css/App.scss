@@ -24,36 +24,7 @@ h1 {
 .App {
   text-align: center;
 }
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.logo {
-  height: 32px;
-  background: rgba(255,255,255,.2);
-  margin: 16px;
-}
 
 .ant-menu.ant-menu-dark .ant-menu-item-selected,
 .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
@@ -90,7 +61,6 @@ h1 {
 
 .ant-modal {
   width: 70% !important;
-  min-width: 400px;
   z-index: 9999;
   padding-bottom: 0px !important;
   margin-bottom: 50px;
@@ -191,11 +161,11 @@ h1 {
   cursor: default;
 }
 
-.frame { -ms-transform: scale(0.45);
-    -moz-transform: scale(0.45);
-    -o-transform: scale(0.45);
-    -webkit-transform: scale(0.45);
-    transform: scale(0.45);
+.frame { -ms-transform: scale(0.38);
+    -moz-transform: scale(0.38);
+    -o-transform: scale(0.38);
+    -webkit-transform: scale(0.38);
+    transform: scale(0.38);
     -ms-transform-origin: 0 0;
       -moz-transform-origin: 0 0;
       -o-transform-origin: 0 0;
@@ -313,6 +283,7 @@ h1 {
   .desk-photo {
     width: 200%;
     left: -47%;
+    z-index: 0;
   }
   .project-board__container {
     width: 60%;
@@ -345,11 +316,31 @@ h1 {
   .name__img {
     width: 70%;
   }
-  .btn__learn-more {
-    display: none;
-  }
   .btn-group__arrows {
     display: none;
+  }
+  .btn__learn-more {
+    position: static;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10vw;
+    z-index: 9999 !important;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    transition-duration: 300ms;
+  }
+  .ant-modal {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer__row {
+    margin-bottom: 10px;
+    margin-top: 20px;
   }
 }
 
