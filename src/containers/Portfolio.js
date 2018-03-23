@@ -132,7 +132,7 @@ class Portfolio extends Component {
           <button
             className="btn__learn-more"
             style={{
-              top: (0.173 * this.props.windowHeight) + (.372 * this.props.windowWidth),
+              top: (0.173 * this.props.windowHeight) + (.347 * this.props.windowWidth),
             }}
             onClick={this.openModal}
             >Learn More
@@ -140,7 +140,7 @@ class Portfolio extends Component {
           <ButtonGroup
             className="btn-group__arrows"
             style={{
-              top: (0.173 * this.props.windowHeight) + (.372 * this.props.windowWidth),
+              top: (0.173 * this.props.windowHeight) + (.347 * this.props.windowWidth),
             }}
           >
             <Button className="btn__arrow" onClick={this.previousProject}>

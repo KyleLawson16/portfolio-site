@@ -13,10 +13,10 @@ class Screen extends Component {
             <iframe
               style={{
                 position: 'absolute',
-                width: (0.539 * this.props.windowWidth) * 1 / .55,
-                left: (0.082 * this.props.windowWidth),
+                width: (0.502 * this.props.windowWidth) * 1 / .55,
+                left: (0.062 * this.props.windowWidth),
                 top: (0.198 * this.props.windowHeight) + (this.props.windowWidth / 55),
-                height: (0.539 * this.props.windowWidth) * 0.585 * 1 / .55
+                height: (0.502 * this.props.windowWidth) * 0.585 * 1 / .55
               }}
               className="frame"
               src={this.props.src}
