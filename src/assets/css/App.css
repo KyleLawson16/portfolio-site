@@ -165,7 +165,7 @@ h1 {
   z-index: 9999;
   padding: .6vw;
   background-color: transparent;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: .5vw;
   font-size: 1.2vw;
   transition-duration: 300ms; }
@@ -189,7 +189,7 @@ h1 {
   padding-left: .9vw;
   padding-right: .9vw;
   background-color: transparent;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: .5vw;
   font-size: 1.2vw;
   transition-duration: 300ms;
