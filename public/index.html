@@ -34,14 +34,31 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101260799-2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    window.dataLayer = window.dataLayer || []
+function gtag() {
+	dataLayer.push(arguments)
+}
+gtag('js', new Date())
 
-      gtag('config', 'UA-101260799-2');
-    </script>
+gtag('config', 'UA-101260799-2')
+</script>
 
     <title>Kyle Lawson</title>
+
+    <script>
+(function (u, s, e, r, g) {
+    u[r] = u[r] || [];
+    u[r].push({
+      'ug.start': new Date().getTime(), event: 'embed.js',
+    });
+    var f = s.getElementsByTagName(e)[0],
+        j = s.createElement(e);
+    j.async = true;
+    j.src = 'https://static.userguiding.com/media/user-guiding-'
+     + g + '-embedded.js';
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'userGuidingLayer', '1278286ID');
+</script>
   </head>
   <body>
     <noscript>
